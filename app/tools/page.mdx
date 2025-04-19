@@ -1,0 +1,39 @@
+---
+title: tools
+description: This is a placeholder description for a dummy component.
+---
+
+## Dummy Component
+
+This is a dummy MDX file used to test rendering, routing, or styling in your documentation setup.
+
+### Features
+
+- Easy to customize
+- No dependencies
+- Fully markdown-based
+
+### Example Usage
+
+```js filename="index.tsx" showLineNumbers {2}
+console.log("This is just a dummy example");
+console.log("highlighted line");
+```
+
+
+import { Tabs } from 'nextra/components'
+ 
+<Tabs items={['pnpm', 'npm', 'yarn']}>
+  <Tabs.Tab>**pnpm**: Fast, disk space efficient package manager.</Tabs.Tab>
+  <Tabs.Tab>**npm** is a package manager for the JavaScript programming language.</Tabs.Tab>
+  <Tabs.Tab>**Yarn** is a software packaging system.</Tabs.Tab>
+</Tabs>
+
+
+import Test from '../../components/counter'
+
+<Test />
+
+<Accordion label="hello">
+  This is the content inside the accordion.
+</Accordion>

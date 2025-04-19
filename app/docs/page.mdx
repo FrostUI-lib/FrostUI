@@ -1,0 +1,345 @@
+---
+title: Accordion
+description: A collapsible panel that displays content when expanded.
+---
+
+import { Tabs } from 'nextra/components';
+import {
+    BasicAccordion,
+    BorderedAccordion,
+    GradientAccordion,
+    NeonAccordion,
+    ShadowAccordion,
+    TimelineAccordion,
+    IconBadgeAccordion,
+    OpenByDefaultAccordion,
+    DisabledAccordion,
+} from '../../PreviewComponent/Accordion/Accordion'; // Adjust the import path if necessary
+
+## Accordion Component
+
+The `Accordion` component provides a way to toggle the visibility of content within a container. It's useful for organizing information and presenting it in a user-friendly way.
+
+### Basic Usage
+
+<div
+  style={{
+    border: '1px solid #e5e7eb',
+    borderRadius: '0.75rem',
+    padding: '1.5rem',
+    marginTop: '2rem',
+    marginBottom: '2rem',
+  }}
+>
+  <Tabs items={['Default', 'Code']}>
+    <Tabs.Tab>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <BasicAccordion />
+      </div>
+    </Tabs.Tab>
+    <Tabs.Tab>
+      ```jsx showLineNumbers: true,
+      import { Accordion } from '@/components/Accordion/accordion';
+
+      export function BasicAccordion() {
+        return (
+          <Accordion label="Basic Accordion" variant="basic">
+            This is a basic accordion. It’s useful for displaying concise information that can be expanded on demand.
+          </Accordion>
+        );
+      }
+      ```
+    </Tabs.Tab>
+  </Tabs>
+</div>
+
+## Installation via CLI
+
+```bash showLineNumbers: true,
+npx shadcn-ui@latest add https://Frostui.in/r/Accordion.json 
+```
+
+### Styling Variants
+
+The `Accordion` component offers several styling variants to match different UI needs.
+
+#### Bordered Accordion
+
+<div
+  style={{
+    border: '1px solid #e5e7eb',
+    borderRadius: '0.75rem',
+    padding: '1.5rem',
+    marginTop: '2rem',
+    marginBottom: '2rem',
+  }}
+>
+  <Tabs items={['Default', 'Code']}>
+    <Tabs.Tab>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <BorderedAccordion />
+      </div>
+    </Tabs.Tab>
+    <Tabs.Tab>
+      ```jsx showLineNumbers: true,
+      import { Accordion } from '@/components/Accordion/accordion';
+
+      export function BorderedAccordion() {
+        return (
+          <Accordion label="Bordered Accordion" variant="bordered">
+            This accordion includes a subtle border around it to better define boundaries between sections.
+          </Accordion>
+        );
+      }
+      ```
+    </Tabs.Tab>
+  </Tabs>
+</div>
+
+#### Gradient Accordion
+
+<div
+  style={{
+    border: '1px solid #e5e7eb',
+    borderRadius: '0.75rem',
+    padding: '1.5rem',
+    marginTop: '2rem',
+    marginBottom: '2rem',
+  }}
+>
+  <Tabs items={['Default', 'Code']}>
+    <Tabs.Tab>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <GradientAccordion />
+      </div>
+    </Tabs.Tab>
+    <Tabs.Tab>
+      ```jsx showLineNumbers: true,
+      import { Accordion } from '@/components/Accordion/accordion';
+
+      export function GradientAccordion() {
+        return (
+          <Accordion label="Gradient Accordion" variant="gradient">
+            This accordion has a vibrant gradient background that adds visual appeal. Great for standout sections!
+          </Accordion>
+        );
+      }
+      ```
+    </Tabs.Tab>
+  </Tabs>
+</div>
+
+#### Neon Accordion
+
+<div
+  style={{
+    border: '1px solid #e5e7eb',
+    borderRadius: '0.75rem',
+    padding: '1.5rem',
+    marginTop: '2rem',
+    marginBottom: '2rem',
+  }}
+>
+  <Tabs items={['Default', 'Code']}>
+    <Tabs.Tab>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <NeonAccordion />
+      </div>
+    </Tabs.Tab>
+    <Tabs.Tab>
+      ```jsx showLineNumbers: true,
+      import { Accordion } from '@/components/Accordion/accordion';
+
+      export function NeonAccordion() {
+        return (
+          <Accordion label="Neon Accordion" variant="neon">
+            Glows with a neon effect! Ideal for attention-grabbing content like alerts, callouts, or flashy UI sections.
+          </Accordion>
+        );
+      }
+      ```
+    </Tabs.Tab>
+  </Tabs>
+</div>
+
+#### Shadow Accordion
+
+<div
+  style={{
+    border: '1px solid #e5e7eb',
+    borderRadius: '0.75rem',
+    padding: '1.5rem',
+    marginTop: '2rem',
+    marginBottom: '2rem',
+  }}
+>
+  <Tabs items={['Default', 'Code']}>
+    <Tabs.Tab>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <ShadowAccordion />
+      </div>
+    </Tabs.Tab>
+    <Tabs.Tab>
+      ```jsx showLineNumbers: true,
+      import { Accordion } from '@/components/Accordion/accordion';
+
+      export function ShadowAccordion() {
+        return (
+          <Accordion label="Shadow Accordion" variant="shadow">
+            This variant comes with a soft shadow for elegant separation from the background.
+          </Accordion>
+        );
+      }
+      ```
+    </Tabs.Tab>
+  </Tabs>
+</div>
+
+#### Timeline Accordion
+
+<div
+  style={{
+    border: '1px solid #e5e7eb',
+    borderRadius: '0.75rem',
+    padding: '1.5rem',
+    marginTop: '2rem',
+    marginBottom: '2rem',
+  }}
+>
+  <Tabs items={['Default', 'Code']}>
+    <Tabs.Tab>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <TimelineAccordion />
+      </div>
+    </Tabs.Tab>
+    <Tabs.Tab>
+      ```jsx showLineNumbers: true,
+      import { Accordion } from '@/components/Accordion/accordion';
+
+      export function TimelineAccordion() {
+        return (
+          <Accordion label="Timeline Accordion" variant="timeline">
+            This accordion includes an avatar/icon badge, perfect for user profiles or notifications.
+          </Accordion>
+        );
+      }
+      ```
+    </Tabs.Tab>
+  </Tabs>
+</div>
+
+#### Icon Badge Accordion
+
+<div
+  style={{
+    border: '1px solid #e5e7eb',
+    borderRadius: '0.75rem',
+    padding: '1.5rem',
+    marginTop: '2rem',
+    marginBottom: '2rem',
+  }}
+>
+  <Tabs items={['Default', 'Code']}>
+    <Tabs.Tab>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <IconBadgeAccordion />
+      </div>
+    </Tabs.Tab>
+    <Tabs.Tab>
+      ```jsx showLineNumbers: true,
+      import { Accordion } from '@/components/Accordion/accordion';
+
+      export function IconBadgeAccordion() {
+        return (
+          <Accordion
+            label="IconBadge Accordion"
+            variant="iconBadge"
+            avatarSrc="/avatar.png"
+          >
+            This accordion includes an avatar/icon badge, perfect for user profiles or notifications.
+          </Accordion>
+        );
+      }
+      ```
+    </Tabs.Tab>
+  </Tabs>
+</div>
+
+### Behavior Props
+
+#### Open by Default
+
+<div
+  style={{
+    border: '1px solid #e5e7eb',
+    borderRadius: '0.75rem',
+    padding: '1.5rem',
+    marginTop: '2rem',
+    marginBottom: '2rem',
+  }}
+>
+  <Tabs items={['Default', 'Code']}>
+    <Tabs.Tab>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <OpenByDefaultAccordion />
+      </div>
+    </Tabs.Tab>
+    <Tabs.Tab>
+      ```jsx showLineNumbers: true,
+      import { Accordion } from '@/components/Accordion/accordion';
+
+      export function OpenByDefaultAccordion() {
+        return (
+          <Accordion label="Open by Default" variant="basic" isOpen>
+            This accordion is expanded by default. You can use this when you want content to be immediately visible.
+          </Accordion>
+        );
+      }
+      ```
+    </Tabs.Tab>
+  </Tabs>
+</div>
+
+#### Disabled Accordion
+
+<div
+  style={{
+    border: '1px solid #e5e7eb',
+    borderRadius: '0.75rem',
+    padding: '1.5rem',
+    marginTop: '2rem',
+    marginBottom: '2rem',
+  }}
+>
+  <Tabs items={['Default', 'Code']}>
+    <Tabs.Tab>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <DisabledAccordion />
+      </div>
+    </Tabs.Tab>
+    <Tabs.Tab>
+      ```jsx showLineNumbers: true,
+      import { Accordion } from '@/components/Accordion/accordion';
+
+      export function DisabledAccordion() {
+        return (
+          <Accordion label="Disabled Accordion" variant="basic" disabled>
+          </Accordion>
+        );
+      }
+      ```
+    </Tabs.Tab>
+  </Tabs>
+</div>
+
+### `Accordion` Props
+
+| Prop        | Type     | Default | Description                                       |
+| ----------- | -------- | ------- | ------------------------------------------------- |
+| `label`     | `string` | -       | The text displayed as the accordion header.       |
+| `variant`   | `string` | `'basic'` | The visual style of the accordion. Options: `'basic'`, `'bordered'`, `'gradient'`, `'neon'`, `'shadow'`, `'timeline'`, `'iconBadge'`. |
+| `isOpen`    | `boolean`| `false` | Controls whether the accordion is initially open. |
+| `disabled`  | `boolean`| `false` | If `true`, the accordion cannot be opened or closed. |
+| `avatarSrc` | `string` | -       | Source URL for the avatar image (only for `iconBadge` variant). |
+| `children`  | `React.ReactNode` | - | The content to be displayed when the accordion is open. |
+

@@ -1,0 +1,234 @@
+---
+title: Button
+description: A versatile button component with multiple styling variants.
+---
+
+import { Tabs } from 'nextra/components';
+import { 
+  ButtonVariantsOne, 
+  ButtonVariantsTwo, 
+  ButtonVariantsThree,
+  ButtonVariantsFour,
+  ButtonSizeVariants
+} from '../../PreviewComponent/Button/Button'; // Adjust path if needed
+
+## Button Component
+
+The `Button` component is used to trigger an action or event, such as submitting a form, opening a dialog, or performing a task.
+
+### Installation via CLI
+
+```bash showLineNumbers: true,
+npx shadcn-ui@latest add https://frostui.in/r/Button.json
+```
+
+### Basic Usage
+
+<div
+  style={{
+    border: '1px solid #e5e7eb',
+    borderRadius: '0.75rem',
+    padding: '1.5rem',
+    marginTop: '2rem',
+    marginBottom: '2rem',
+  }}
+>
+  <Tabs items={['Default', 'Code']}>
+    <Tabs.Tab>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem' }}>
+        <ButtonVariantsOne />
+      </div>
+    </Tabs.Tab>
+    <Tabs.Tab>
+        ``` jsx showLineNumbers: true, {1}
+        'use client'
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <Button variant="solid" colorscheme="primary">Primary</Button>
+            <Button variant="solid" colorscheme="secondary">Secondary</Button>
+            <Button variant="solid" colorscheme="success">Success</Button>
+            <Button variant="solid" colorscheme="danger">Danger</Button>
+        </div>
+        ```
+    </Tabs.Tab>
+  </Tabs>
+</div>
+
+<div
+  style={{
+    border: '1px solid #e5e7eb',
+    borderRadius: '0.75rem',
+    padding: '1.5rem',
+    marginTop: '2rem',
+    marginBottom: '2rem',
+  }}
+>
+  <Tabs items={['Default', 'Code']}>
+    <Tabs.Tab>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem' }}>
+        <ButtonVariantsTwo />
+      </div>
+    </Tabs.Tab>
+    <Tabs.Tab>
+        ``` jsx showLineNumbers: true, {1}
+        'use client'
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <Button variant="solid" colorscheme="warning">Warning</Button>
+            <Button variant="solid" colorscheme="info">Info</Button>
+            <Button variant="solid" colorscheme="light">Light</Button>
+            <Button variant="outline" colorscheme="primary">Outline</Button>
+        </div>
+        ```
+    </Tabs.Tab>
+  </Tabs>
+</div>
+
+<div
+  style={{
+    border: '1px solid #e5e7eb',
+    borderRadius: '0.75rem',
+    padding: '1.5rem',
+    marginTop: '2rem',
+    marginBottom: '2rem',
+  }}
+>
+  <Tabs items={['Default', 'Code']}>
+    <Tabs.Tab>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem' }}>
+        <ButtonVariantsThree />
+      </div>
+    </Tabs.Tab>
+    <Tabs.Tab>
+        ``` jsx showLineNumbers: true, {1}
+        'use client'
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <Button variant="ghost" colorscheme="primary">Ghost</Button>
+            <Button variant="soft" colorscheme="primary">Soft</Button>
+            <Button variant="link" colorscheme="primary">Link</Button>
+            <Button variant="outline" colorscheme="success">Outline Success</Button>
+        </div>
+        ```
+    </Tabs.Tab>
+  </Tabs>
+</div>
+
+<div
+  style={{
+    border: '1px solid #e5e7eb',
+    borderRadius: '0.75rem',
+    padding: '1.5rem',
+    marginTop: '2rem',
+    marginBottom: '2rem',
+  }}
+>
+  <Tabs items={['Default', 'Code']}>
+    <Tabs.Tab>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem' }}>
+        <ButtonSizeVariants />
+      </div>
+    </Tabs.Tab>
+    <Tabs.Tab>
+        ``` jsx showLineNumbers: true, {1}
+        'use client'
+        <div className="flex flex-row items-start gap-4">
+            <Button size="sm">Small</Button>
+            <Button size="md">Medium</Button>
+            <Button size="lg">Large</Button>
+            <Button size="xl">Extra Large</Button>
+      </div>
+        ```
+    </Tabs.Tab>
+  </Tabs>
+</div>
+
+<div
+  style={{
+    border: '1px solid #e5e7eb',
+    borderRadius: '0.75rem',
+    padding: '1.5rem',
+    marginTop: '2rem',
+    marginBottom: '2rem',
+  }}
+>
+  <Tabs items={['Default', 'Code']}>
+    <Tabs.Tab>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem' }}>
+        <ButtonVariantsFour />
+      </div>
+    </Tabs.Tab>
+    <Tabs.Tab>
+        ``` jsx showLineNumbers: true, {1}
+        'use client'
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <Button isLoading>Loading</Button>
+            <Button leftIcon={svgIcon}>Left Icon</Button>
+            <Button rightIcon={svgIcon}>Right Icon</Button>
+        </div>
+        ```
+    </Tabs.Tab>
+  </Tabs>
+</div>
+
+import { Table } from 'nextra/components';
+
+### `Button` Props
+
+<Table>
+  <thead>
+    <Table.Tr>
+      <Table.Th>Prop</Table.Th>
+      <Table.Th>Type</Table.Th>
+      <Table.Th>Default</Table.Th>
+      <Table.Th>Description</Table.Th>
+    </Table.Tr>
+  </thead>
+  <tbody>
+    <Table.Tr>
+      <Table.Td><code>variant</code></Table.Td>
+      <Table.Td><code>string</code></Table.Td>
+      <Table.Td><code>'solid'</code></Table.Td>
+      <Table.Td>The visual style of the button. Options: <code>'solid'</code>, <code>'outline'</code>, <code>'ghost'</code>, <code>'soft'</code>, <code>'link'</code>.</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><code>colorscheme</code></Table.Td>
+      <Table.Td><code>string</code></Table.Td>
+      <Table.Td>-</Table.Td>
+      <Table.Td>The color scheme of the button (e.g., <code>'primary'</code>, <code>'secondary'</code>, <code>'success'</code>, <code>'danger'</code>, <code>'warning'</code>, <code>'info'</code>, <code>'light'</code>).</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><code>isLoading</code></Table.Td>
+      <Table.Td><code>boolean</code></Table.Td>
+      <Table.Td><code>false</code></Table.Td>
+      <Table.Td>If <code>true</code>, displays a loading indicator inside the button.</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><code>leftIcon</code></Table.Td>
+      <Table.Td><code>string</code></Table.Td>
+      <Table.Td>-</Table.Td>
+      <Table.Td>Icon to display on the left side of the button text.</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><code>rightIcon</code></Table.Td>
+      <Table.Td><code>string</code></Table.Td>
+      <Table.Td>-</Table.Td>
+      <Table.Td>Icon to display on the right side of the button text.</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><code>fullWidth</code></Table.Td>
+      <Table.Td><code>boolean</code></Table.Td>
+      <Table.Td><code>false</code></Table.Td>
+      <Table.Td>If <code>true</code>, the button will take up the full width of its parent container.</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><code>children</code></Table.Td>
+      <Table.Td><code>React.ReactNode</code></Table.Td>
+      <Table.Td>-</Table.Td>
+      <Table.Td>The content to be displayed within the button.</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><code>className</code></Table.Td>
+      <Table.Td><code>string</code></Table.Td>
+      <Table.Td>-</Table.Td>
+      <Table.Td>Additional CSS classes to apply to the button.</Table.Td>
+    </Table.Tr>
+  </tbody>
+</Table>

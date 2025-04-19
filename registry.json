@@ -1,0 +1,91 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "frost-ui",
+  "homepage": "http://localhost:3000",
+  "items": [
+    {
+      "name": "Button",
+      "type": "registry:component",
+      "dependencies": ["class-variance-authority"],
+      "files": [
+        {
+          "path": "components/ui/button.tsx",
+          "type": "registry:component",
+          "target": "components/Button/button.tsx"
+        }
+      ]
+    },
+    {
+      "name": "Accordion",
+      "type": "registry:component",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "components/ui/Accordion/accordion.tsx",
+          "type": "registry:component",
+          "target": "components/Accordion/accordion.tsx"
+        }
+      ]
+    },
+    {
+      "name": "Tooltip",
+      "type": "registry:component",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "components/ui/tooltip/tooltip.tsx",
+          "type": "registry:component",
+          "target": "components/Tooltip/tooltip.tsx"
+        }
+      ]
+    },
+    {
+      "name": "PointerFollower",
+      "type": "registry:component",
+      "dependencies": ["framer-motion"],
+      "files": [
+        {
+          "path": "components/ui/PointerFollower/pointerfollow.tsx",
+          "type": "registry:component",
+          "target": "components/PointerFollower/pointerfollow.tsx"
+        }
+      ]
+    },
+    {
+      "name": "TiltCard",
+      "type": "registry:component",
+      "dependencies": ["framer-motion"],
+      "files": [
+        {
+          "path": "components/ui/TiltCard/tiltcard.tsx",
+          "type": "registry:component",
+          "target": "components/TiltCard/tiltcard.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ImageCarousel",
+      "type": "registry:component",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "components/ui/ImageCarousel/imagecarousel.tsx",
+          "type": "registry:component",
+          "target": "components/ImageCarousel/imagecarousel.tsx"
+        }
+      ]
+    },
+    {
+      "name": "Loader",
+      "type": "registry:component",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "components/ui/Loader/loader.tsx",
+          "type": "registry:component",
+          "target": "components/Loader/loader.tsx"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "PointerFollower",
+  "type": "registry:component",
+  "dependencies": [
+    "framer-motion"
+  ],
+  "files": [
+    {
+      "path": "components/ui/PointerFollower/pointerfollow.tsx",
+      "content": "'use client'\r\n\r\nimport { useRef, useState } from \"react\";\r\nimport { motion, useSpring } from \"framer-motion\";\r\nimport { cn } from \"@/lib/utils\";\r\n\r\nexport interface PointerFollowerCardProps {\r\n  label: string;\r\n  className?: string;\r\n  labelClassName?: string;\r\n  children?: React.ReactNode;\r\n}\r\n\r\nconst gradientClasses = [\r\n  \"bg-gradient-to-br from-pink-500/80 to-purple-600/80\",\r\n  \"bg-gradient-to-br from-emerald-500/80 to-teal-600/80\",\r\n  \"bg-gradient-to-br from-yellow-400/80 to-orange-500/80\",\r\n  \"bg-gradient-to-br from-indigo-500/80 to-blue-600/80\",\r\n];\r\n\r\nexport const PointerFollower = ({\r\n  label,\r\n  className,\r\n  children,\r\n  labelClassName,\r\n}: PointerFollowerCardProps) => {\r\n  const ref = useRef<HTMLDivElement>(null);\r\n  const [isHovered, setIsHovered] = useState(false);\r\n\r\n  const [randomBg, setRandomBg] = useState(gradientClasses[0]);\r\n\r\n  const x = useSpring(0, { stiffness: 200, damping: 20 });\r\n  const y = useSpring(0, { stiffness: 200, damping: 20 });\r\n\r\n  const handleMouseMove = (e: React.MouseEvent) => {\r\n    const rect = ref.current?.getBoundingClientRect();\r\n    if (!rect) return;\r\n\r\n    const offsetX = e.clientX - rect.left;\r\n    const offsetY = e.clientY - rect.top;\r\n\r\n    x.set(offsetX);\r\n    y.set(offsetY);\r\n  };\r\n\r\n  const handleMouseEnter = () => {\r\n    const random = gradientClasses[Math.floor(Math.random() * gradientClasses.length)];\r\n    setRandomBg(random);\r\n    setIsHovered(true);\r\n  };\r\n\r\n  return (\r\n    <div\r\n      ref={ref}\r\n      className={cn(className, \"relative overflow-hidden\")}\r\n      onMouseMove={handleMouseMove}\r\n      onMouseEnter={handleMouseEnter}\r\n      onMouseLeave={() => setIsHovered(false)}\r\n    >\r\n      {children}\r\n\r\n      {isHovered && (\r\n        <motion.div\r\n          style={{\r\n            translateX: x,\r\n            translateY: y,\r\n          }}\r\n          className=\"pointer-events-none absolute top-0 left-0 z-10\"\r\n        >\r\n          <div\r\n            className={cn(\r\n              \"px-3 py-1 text-xs font-semibold text-white rounded-full backdrop-blur-md shadow-xl\",\r\n              randomBg,\r\n              labelClassName\r\n            )}\r\n          >\r\n            {label}\r\n          </div>\r\n        </motion.div>\r\n      )}\r\n    </div>\r\n  );\r\n};",
+      "type": "registry:component",
+      "target": "components/PointerFollower/pointerfollow.tsx"
+    }
+  ]
+}
