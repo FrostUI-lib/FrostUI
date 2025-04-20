@@ -14,7 +14,9 @@ import {
     IconBadgeAccordion,
     OpenByDefaultAccordion,
     DisabledAccordion,
-} from '../../PreviewComponent/Accordion/Accordion'; // Adjust the import path if necessary
+} from '../../PreviewComponent/Accordion/Accordion'; 
+
+import { OpenInV0Button } from '../../components/v0Button/Button'
 
 ## Accordion Component
 
@@ -31,7 +33,7 @@ The `Accordion` component provides a way to toggle the visibility of content wit
     marginBottom: '2rem',
   }}
 >
-  <Tabs items={['Default', 'Code']}>
+  <Tabs items={['Preview', 'Code']}>
     <Tabs.Tab>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <BasicAccordion />
@@ -74,7 +76,7 @@ The `Accordion` component offers several styling variants to match different UI 
     marginBottom: '2rem',
   }}
 >
-  <Tabs items={['Default', 'Code']}>
+  <Tabs items={['Preview', 'Code']}>
     <Tabs.Tab>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <BorderedAccordion />
@@ -107,7 +109,7 @@ The `Accordion` component offers several styling variants to match different UI 
     marginBottom: '2rem',
   }}
 >
-  <Tabs items={['Default', 'Code']}>
+  <Tabs items={['Preview', 'Code']}>
     <Tabs.Tab>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <GradientAccordion />
@@ -140,7 +142,7 @@ The `Accordion` component offers several styling variants to match different UI 
     marginBottom: '2rem',
   }}
 >
-  <Tabs items={['Default', 'Code']}>
+  <Tabs items={['Preview', 'Code']}>
     <Tabs.Tab>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <NeonAccordion />
@@ -173,7 +175,7 @@ The `Accordion` component offers several styling variants to match different UI 
     marginBottom: '2rem',
   }}
 >
-  <Tabs items={['Default', 'Code']}>
+  <Tabs items={['Preview', 'Code']}>
     <Tabs.Tab>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <ShadowAccordion />
@@ -206,7 +208,7 @@ The `Accordion` component offers several styling variants to match different UI 
     marginBottom: '2rem',
   }}
 >
-  <Tabs items={['Default', 'Code']}>
+  <Tabs items={['Preview', 'Code']}>
     <Tabs.Tab>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <TimelineAccordion />
@@ -239,7 +241,7 @@ The `Accordion` component offers several styling variants to match different UI 
     marginBottom: '2rem',
   }}
 >
-  <Tabs items={['Default', 'Code']}>
+  <Tabs items={['Preview', 'Code']}>
     <Tabs.Tab>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <IconBadgeAccordion />
@@ -278,7 +280,7 @@ The `Accordion` component offers several styling variants to match different UI 
     marginBottom: '2rem',
   }}
 >
-  <Tabs items={['Default', 'Code']}>
+  <Tabs items={['Preview', 'Code']}>
     <Tabs.Tab>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <OpenByDefaultAccordion />
@@ -311,7 +313,7 @@ The `Accordion` component offers several styling variants to match different UI 
     marginBottom: '2rem',
   }}
 >
-  <Tabs items={['Default', 'Code']}>
+  <Tabs items={['Preview', 'Code']}>
     <Tabs.Tab>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <DisabledAccordion />
@@ -332,14 +334,57 @@ The `Accordion` component offers several styling variants to match different UI 
   </Tabs>
 </div>
 
-### `Accordion` Props
 
-| Prop        | Type     | Default | Description                                       |
-| ----------- | -------- | ------- | ------------------------------------------------- |
-| `label`     | `string` | -       | The text displayed as the accordion header.       |
-| `variant`   | `string` | `'basic'` | The visual style of the accordion. Options: `'basic'`, `'bordered'`, `'gradient'`, `'neon'`, `'shadow'`, `'timeline'`, `'iconBadge'`. |
-| `isOpen`    | `boolean`| `false` | Controls whether the accordion is initially open. |
-| `disabled`  | `boolean`| `false` | If `true`, the accordion cannot be opened or closed. |
-| `avatarSrc` | `string` | -       | Source URL for the avatar image (only for `iconBadge` variant). |
-| `children`  | `React.ReactNode` | - | The content to be displayed when the accordion is open. |
+### Props
+import { Table } from 'nextra/components'
 
+###
+
+<Table>
+  <thead>
+    <Table.Tr>
+      <Table.Th>Prop</Table.Th>
+      <Table.Th>Type</Table.Th>
+      <Table.Th>Default</Table.Th>
+      <Table.Th>Description</Table.Th>
+    </Table.Tr>
+  </thead>
+  <tbody>
+    <Table.Tr>
+      <Table.Td><code>label</code></Table.Td>
+      <Table.Td><code>string</code></Table.Td>
+      <Table.Td>-</Table.Td>
+      <Table.Td>The text displayed as the accordion header.</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><code>variant</code></Table.Td>
+      <Table.Td><code>string</code></Table.Td>
+      <Table.Td><code>'basic'</code></Table.Td>
+      <Table.Td>The visual style of the accordion. Options: <code>'basic'</code>, <code>'bordered'</code>, <code>'gradient'</code>, <code>'neon'</code>, <code>'shadow'</code>, <code>'timeline'</code>, <code>'iconBadge'</code>.</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><code>isOpen</code></Table.Td>
+      <Table.Td><code>boolean</code></Table.Td>
+      <Table.Td><code>false</code></Table.Td>
+      <Table.Td>Controls whether the accordion is initially open.</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><code>disabled</code></Table.Td>
+      <Table.Td><code>boolean</code></Table.Td>
+      <Table.Td><code>false</code></Table.Td>
+      <Table.Td>If <code>true</code>, the accordion cannot be opened or closed.</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><code>avatarSrc</code></Table.Td>
+      <Table.Td><code>string</code></Table.Td>
+      <Table.Td>-</Table.Td>
+      <Table.Td>Source URL for the avatar image (only for <code>'iconBadge'</code> variant).</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><code>children</code></Table.Td>
+      <Table.Td><code>React.ReactNode</code></Table.Td>
+      <Table.Td>-</Table.Td>
+      <Table.Td>The content to be displayed when the accordion is open.</Table.Td>
+    </Table.Tr>
+  </tbody>
+</Table>

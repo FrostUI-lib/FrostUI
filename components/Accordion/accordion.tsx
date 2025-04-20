@@ -42,7 +42,7 @@ export const Accordion: React.FC<AccordionProps> = ({
   return (
     <div
       className={cn(
-        "w-1/2 rounded-md transition-all text-black dark:text-white dark:bg-gray-700",
+        "w-full rounded-md transition-all text-black dark:text-white dark:bg-gray-700",
         variant === "bordered" && "border border-gray-300",
         variant === "gradient" &&
           "bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-md",

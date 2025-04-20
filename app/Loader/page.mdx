@@ -1,0 +1,208 @@
+---
+title: Loader
+description: A visual indicator of loading or processing activity.
+---
+
+import { Tabs } from 'nextra/components';
+import { 
+    BasicLoader,
+    DotsLoaderDemo,
+    InlineLoaderDemo,
+    SizeLoadersDemo,
+    SpeedLoadersDemo,
+ } from '../../PreviewComponent/Loader/Loader'
+
+## Loader Component
+
+The `Loader` component provides a visual cue to users that an operation is in progress. It comes in various sizes, types, and speeds to suit different contexts within your application.
+
+### Basic Usage
+
+<div
+  style={{
+    border: '1px solid #e5e7eb',
+    borderRadius: '0.75rem',
+    padding: '1.5rem',
+    marginTop: '2rem',
+    marginBottom: '2rem',
+  }}
+>
+  <Tabs items={['Preview', 'Code']}>
+    <Tabs.Tab>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <BasicLoader />
+      </div>
+    </Tabs.Tab>
+    <Tabs.Tab>
+      ```jsx showLineNumbers: true,
+      <Loader />;
+      ```
+    </Tabs.Tab>
+  </Tabs>
+</div>
+
+## Installation via CLI
+
+```bash showLineNumbers: true,
+npx shadcn-ui@latest add https://Frostui.in/r/Loader.json
+```
+
+### Loader Types
+The Loader component offers different visual representations of loading.
+
+### Inline Loader
+
+<div
+  style={{
+    border: '1px solid #e5e7eb',
+    borderRadius: '0.75rem',
+    padding: '1.5rem',
+    marginTop: '2rem',
+    marginBottom: '2rem',
+  }}
+>
+  <Tabs items={['Preview', 'Code']}>
+    <Tabs.Tab>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <InlineLoaderDemo />
+      </div>
+    </Tabs.Tab>
+    <Tabs.Tab>
+      ```jsx showLineNumbers: true,
+      <Loader type="inline" />
+      ```
+    </Tabs.Tab>
+  </Tabs>
+</div>
+
+### Dots Loader
+
+<div
+  style={{
+    border: '1px solid #e5e7eb',
+    borderRadius: '0.75rem',
+    padding: '1.5rem',
+    marginTop: '2rem',
+    marginBottom: '2rem',
+  }}
+>
+  <Tabs items={['Preview', 'Code']}>
+    <Tabs.Tab>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <DotsLoaderDemo />
+      </div>
+    </Tabs.Tab>
+    <Tabs.Tab>
+      ```jsx showLineNumbers: true,
+      <Loader type="inline" speed="2.1s" />
+      ```
+    </Tabs.Tab>
+  </Tabs>    
+</div>
+
+### Loader sizes
+
+<div
+  style={{
+    border: '1px solid #e5e7eb',
+    borderRadius: '0.75rem',
+    padding: '1.5rem',
+    marginTop: '2rem',
+    marginBottom: '2rem',
+  }}
+>
+  <Tabs items={['Preview', 'Code']}>
+    <Tabs.Tab>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <SizeLoadersDemo />
+      </div>
+    </Tabs.Tab>
+    <Tabs.Tab>
+      ```jsx showLineNumbers: true,
+            <div className="flex gap-4 items-center">
+                <Loader size="sm" className="text-blue-500"/>
+                <Loader size="md" className="text-red-500"/>
+                <Loader size="lg" className="text-green-500"/>
+            </div>
+      ```
+    </Tabs.Tab>
+  </Tabs>
+</div>
+
+### Loader Speed
+
+<div
+  style={{
+    border: '1px solid #e5e7eb',
+    borderRadius: '0.75rem',
+    padding: '1.5rem',
+    marginTop: '2rem',
+    marginBottom: '2rem',
+  }}
+>
+  <Tabs items={['Preview', 'Code']}>
+    <Tabs.Tab>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <SpeedLoadersDemo />
+      </div>
+    </Tabs.Tab>
+    <Tabs.Tab>
+      ```jsx showLineNumbers: true,
+            <div className="flex gap-4 items-center">
+                <Loader speed="0.7s" className="text-blue-500"/>
+                <Loader speed="1s" className="text-red-500"/>
+                <Loader speed="2s" className="text-green-500"/>
+            </div>
+      ```
+    </Tabs.Tab>
+  </Tabs>
+</div>
+
+import { Table } from 'nextra/components';
+
+### `Loader` Props
+
+###
+
+<Table>
+  <thead>
+    <Table.Tr>
+      <Table.Th>Prop</Table.Th>
+      <Table.Th>Type</Table.Th>
+      <Table.Th>Default</Table.Th>
+      <Table.Th>Description</Table.Th>
+    </Table.Tr>
+  </thead>
+  <tbody>
+    <Table.Tr>
+      <Table.Td><code>className</code></Table.Td>
+      <Table.Td><code>string</code></Table.Td>
+      <Table.Td>-</Table.Td>
+      <Table.Td>Additional CSS classes to apply to the loader container.</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><code>dotClassName</code></Table.Td>
+      <Table.Td><code>string</code></Table.Td>
+      <Table.Td>-</Table.Td>
+      <Table.Td>CSS classes to apply to the individual dots when <code>type</code> is <code>"dots"</code>.</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><code>size</code></Table.Td>
+      <Table.Td><code>"sm" | "md" | "lg"</code></Table.Td>
+      <Table.Td><code>"md"</code></Table.Td>
+      <Table.Td>The size of the loader.</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><code>speed</code></Table.Td>
+      <Table.Td><code>string</code></Table.Td>
+      <Table.Td><code>"1s"</code></Table.Td>
+      <Table.Td>The animation speed of the loader (e.g., <code>"0.5s"</code>, <code>"2s"</code>).</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><code>type</code></Table.Td>
+      <Table.Td><code>"default" | "inline" | "dots"</code></Table.Td>
+      <Table.Td><code>"default"</code></Table.Td>
+      <Table.Td>The visual type of the loader.</Table.Td>
+    </Table.Tr>
+  </tbody>
+</Table>

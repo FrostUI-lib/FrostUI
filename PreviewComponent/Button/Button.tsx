@@ -3,10 +3,14 @@
 "use client";
 
 import { Button } from "@/components/Button/button";
+import { OpenInV0Button } from "@/components/v0Button/Button";
 
 export function ButtonVariantsOne() {
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <OpenInV0Button 
+    url="npx shadcn@latest add http://frost-ui-seven.vercel.app/r/Button.json" 
+  />
       <Button variant="solid" colorscheme="primary">Primary</Button>
       <Button variant="solid" colorscheme="secondary">Secondary</Button>
       <Button variant="solid" colorscheme="success">Success</Button>

@@ -1,0 +1,127 @@
+---
+title: CardSlider
+description: A component for displaying a rotating series of images with navigation controls.
+---
+
+import { Tabs } from 'nextra/components';
+import { BasicImageCarouselDemo } from '../../PreviewComponent/CardSlider/CardSlider'
+
+## CardSlider Component
+
+The `CardSlider` component allows you to showcase a collection of images in a dynamic and interactive way. Users can navigate through the images using the provided navigation buttons.
+
+### Basic Usage
+
+<div
+  style={{
+    border: '1px solid #e5e7eb',
+    borderRadius: '0.75rem',
+    padding: '1.5rem',
+    marginTop: '2rem',
+    marginBottom: '2rem',
+  }}
+>
+  <Tabs items={['Preview', 'Code']}>
+    <Tabs.Tab>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <BasicImageCarouselDemo />
+      </div>
+    </Tabs.Tab>
+    <Tabs.Tab>
+      ```jsx showLineNumbers: true,
+
+        import { ImageCarousel } from "@/components/ImageCarousel/imagecarousel";
+
+        const sampleImages = [
+            {
+                src: "/download.jpeg",
+                title: "Manu Arora",
+                description: "Founder of Aceternity-labs.",
+            },
+            {
+                src: "/Manuji.jpg",
+                title: "Serene Lake",
+                description: "A peaceful lake surrounded by greenery.",
+            },
+            {
+                src: "https://images.unsplash.com/photo-1601778587862-92e5f4101c33?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fG5hdHVyZSUyMGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
+                title: "Forest Path",
+                description: "A tranquil path winding through the forest.",
+            },
+        ];
+
+        export function CardSlider() {
+            return <ImageCarousel images={sampleImages} />;
+        }
+
+      ```
+    </Tabs.Tab>
+  </Tabs>
+</div>
+
+## Installation via CLI
+
+```bash showLineNumbers: true
+npx shadcn-ui@latest add https://Frostui.in/r/ImageCarousel.json
+```
+
+### Props
+###
+
+<Table>
+  <thead>
+    <Table.Tr>
+      <Table.Th>Prop</Table.Th>
+      <Table.Th>Type</Table.Th>
+      <Table.Th>Default</Table.Th>
+      <Table.Th>Description</Table.Th>
+    </Table.Tr>
+  </thead>
+  <tbody>
+    <Table.Tr>
+      <Table.Td><code>images</code></Table.Td>
+      <Table.Td><code>ImageData[]</code></Table.Td>
+      <Table.Td>-</Table.Td>
+      <Table.Td>An array of image objects, where each object has a <code>src</code> (string, required), <code>title</code> (string, required), and an optional <code>description</code> (string).</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><code>buttonClassName</code></Table.Td>
+      <Table.Td><code>string</code></Table.Td>
+      <Table.Td>-</Table.Td>
+      <Table.Td>Optional CSS classes to apply to the navigation buttons.</Table.Td>
+    </Table.Tr>
+  </tbody>
+</Table>
+
+### `ImageData` Interface
+
+###
+
+import {Table} from 'nextra/components'
+
+<Table>
+  <thead>
+    <Table.Tr>
+      <Table.Th>Property</Table.Th>
+      <Table.Th>Type</Table.Th>
+      <Table.Th>Description</Table.Th>
+    </Table.Tr>
+  </thead>
+  <tbody>
+    <Table.Tr>
+      <Table.Td><code>src</code></Table.Td>
+      <Table.Td><code>string</code></Table.Td>
+      <Table.Td>The URL of the image.</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><code>title</code></Table.Td>
+      <Table.Td><code>string</code></Table.Td>
+      <Table.Td>The title or alt text for the image.</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><code>description</code></Table.Td>
+      <Table.Td><code>string</code> (optional)</Table.Td>
+      <Table.Td>A brief description of the image, displayed below the title.</Table.Td>
+    </Table.Tr>
+  </tbody>
+</Table>

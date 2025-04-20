@@ -1,0 +1,189 @@
+---
+title: FancyFloatingInfo
+description: A customizable floating tooltip component to display information, warnings, or errors.
+---
+
+import { Tabs } from 'nextra/components';
+import { 
+    InfoTooltip,
+    WarningTooltip,
+    ErrorTooltip
+ } from '../../PreviewComponent/ToolTip/Tooltip'
+
+## FancyFloatingInfo Component
+
+The `FancyFloatingInfo` component provides a way to display contextual information, warnings, or errors in a floating panel that appears on hover or focus of a trigger element.
+
+
+## Installation via CLI
+
+```bash showLineNumbers: true,
+npx shadcn-ui@latest add https://frostui.in/r/Button.json
+```
+
+### Variant Types
+
+The `FancyFloatingInfo` component supports different visual variants to convey the nature of the information.
+
+#### Info Tooltip
+
+Used to display general information or helpful tips.
+
+<div
+  style={{
+    border: '1px solid #e5e7eb',
+    borderRadius: '0.75rem',
+    padding: '1.5rem',
+    marginTop: '2rem',
+    marginBottom: '2rem',
+  }}
+>
+  <Tabs items={['Preview', 'Code']}>
+    <Tabs.Tab>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem' }}>
+        <InfoTooltip />
+      </div>
+    </Tabs.Tab>
+    <Tabs.Tab>
+        ``` jsx showLineNumbers: true
+        <FancyFloatingInfo
+            label="Info Tooltip"
+            content={{
+            title: "Info Tooltip",
+            description: "This is an info tooltip that provides additional information about a specific element or action.",
+            }}
+            variant="info"
+        />
+        ```
+    </Tabs.Tab>
+  </Tabs>
+</div>
+
+#### Warning Tooltip
+
+Used to alert users about potential issues or important considerations.
+
+<div
+  style={{
+    border: '1px solid #e5e7eb',
+    borderRadius: '0.75rem',
+    padding: '1.5rem',
+    marginTop: '2rem',
+    marginBottom: '2rem',
+  }}
+>
+  <Tabs items={['Preview', 'Code']}>
+    <Tabs.Tab>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem' }}>
+        <WarningTooltip />
+      </div>
+    </Tabs.Tab>
+    <Tabs.Tab>
+        ``` jsx showLineNumbers: true
+        <FancyFloatingInfo
+            label="Warning Tooltip"
+            content={{
+            title: "Warning Tooltip",
+            description: "This is a warning tooltip that alerts users to potential issues or important notes.",
+            }}
+            variant="warning"
+        />
+        ```
+    </Tabs.Tab>
+  </Tabs>
+</div>
+
+#### Error Tooltip
+
+Used to indicate an error or a failure condition.
+
+<div
+  style={{
+    border: '1px solid #e5e7eb',
+    borderRadius: '0.75rem',
+    padding: '1.5rem',
+    marginTop: '2rem',
+    marginBottom: '2rem',
+  }}
+>
+  <Tabs items={['Preview', 'Code']}>
+    <Tabs.Tab>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem' }}>
+        <ErrorTooltip />
+      </div>
+    </Tabs.Tab>
+    <Tabs.Tab>
+        ``` jsx showLineNumbers: true
+        <FancyFloatingInfo
+            label="Error Tooltip"
+            content={{
+            title: "Error Tooltip",
+            description: "This is an error tooltip that indicates an error or failure condition.",
+            }}
+            variant="error"
+        />
+        ```
+    </Tabs.Tab>
+  </Tabs>
+</div>
+
+### `FancyFloatingInfo` Props
+
+import { Table } from 'nextra/components';
+
+### `FancyFloatingInfo` Props
+
+###
+
+<Table>
+  <thead>
+    <Table.Tr>
+      <Table.Th>Prop</Table.Th>
+      <Table.Th>Type</Table.Th>
+      <Table.Th>Default</Table.Th>
+      <Table.Th>Description</Table.Th>
+    </Table.Tr>
+  </thead>
+  <tbody>
+    <Table.Tr>
+      <Table.Td><code>label</code></Table.Td>
+      <Table.Td><code>string</code></Table.Td>
+      <Table.Td>-</Table.Td>
+      <Table.Td>The text that triggers the tooltip on hover or focus.</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><code>content</code></Table.Td>
+      <Table.Td>
+        <code>object</code>
+      </Table.Td>
+      <Table.Td>-</Table.Td>
+      <Table.Td>An object containing the tooltip's content, with optional <code>title</code> (string) and <code>description</code> (string) properties.</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><code>icon</code></Table.Td>
+      <Table.Td><code>ReactNode</code></Table.Td>
+      <Table.Td>-</Table.Td>
+      <Table.Td>Optional icon to display within the trigger button.</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><code>variant</code></Table.Td>
+      <Table.Td>
+        <code>"info" | "warning" | "error"</code>
+      </Table.Td>
+      <Table.Td><code>"info"</code></Table.Td>
+      <Table.Td>The visual style of the tooltip.</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><code>className</code></Table.Td>
+      <Table.Td><code>string</code></Table.Td>
+      <Table.Td>-</Table.Td>
+      <Table.Td>Additional CSS classes to apply to the trigger button.</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><code>tooltipClassName</code></Table.Td>
+      <Table.Td><code>string</code></Table.Td>
+      <Table.Td>-</Table.Td>
+      <Table.Td>Additional CSS classes to apply to the tooltip container.</Table.Td>
+    </Table.Tr>
+  </tbody>
+</Table>

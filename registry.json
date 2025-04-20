@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "frost-ui",
-  "homepage": "http://localhost:3000",
+  "homepage": "https://frost-ui-seven.vercel.app/",
   "items": [
     {
       "name": "Button",
